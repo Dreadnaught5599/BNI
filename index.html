@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>BNI</title>
+<style>
+body
+{
+background: red url("img/BNIlogo.JPG");
+background-position: 50% -40%;
+background-repeat: no-repeat;
+background-size: cover;
+}
+/* ----------------------------------------------Start of Resource Links and Agencies Button CSS ----------------------------------------------------- */
+.dropbtn {
+    background-color: white;
+    color: black;
+    font-size: 15px;
+font-style: normal;
+    cursor: pointer;
+border: solid;
+max-width: 125px;
+min-width: 125px;
+max-height: 100px;
+min-height: 50px;
+text-align: center;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: grey;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+     position: absolute;
+     left: 10%;
+     top: 77%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+background-color: white;
+left: 1%;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,10);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 5px 5px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+/*-------------------------------------------End of Resource Links and Agencies Button CSS------------------------------------------------------*/
+/* ------------------------------------------Start of Tenant Button CSS-------------------------------------------------------------------*/
+.tbtn {
+  position: absolute;
+  left: 10%;
+  top: 8%;
+}
+/* -------------------------------------------End of Tenant Button CSS-------------------------------------------------------------------*/
+/*--------------------------------------------Start of Fair Housing Button CSS-----------------------------------------------------------*/
+.fbtn {
+  position: absolute;
+  left: 55%;
+  top: 8%;
+}
+/*-------------------------------------------------Start of Tenant Button JavaScript-------------------------------------------------------------------*/
+</style>
+
+          <script type="text/javascript">
+             function callTenantPage()
+             {
+                window.location.href = "tenant.html";
+             }
+</script>
+<!-- End of Tenant Button JavaScript -->
+<!-- Start of FairHousing Button JavaScript -->
+<script type="text/javascript">
+function callFairHousingPage()
+{
+window.location.href = "housing.html";
+}
+</script>
+
+<!-- End of FairHousing Button JavaScript -->
+<!-- Start of Resource Button JavaScript -->
+<script type="text/javascript">
+function callResourcePage()
+{
+window.location.href = "resource.html";
+}
+</script>
+<!-- End of Resource Button Javascript -->
+</head>
+<body>
+
+<!-- Start of Resource Links Button html -->
+<!-- <div class="dropdown">
+<button onclick="linkButton()" class="dropbtn">Resource Links and Agencies</button>
+<div id="linkButtonA" class="dropdown-content">
+<a href="https://www.google.com">Google</a>
+<a href="#about">Link 2</a>
+<a href="#contact">Link 3</a>
+
+</div>
+</div> -->
+<div class="dropdown">
+<button onclick="callResourcePage()" class="dropbtn">Resource Links and Agencies</button>
+</div>
+<!-- End of Resource Links Button html -->
+
+<!-- Start of Resource Links Button Javascript -->
+<script>
+function linkButton()
+{
+document.getElementById("linkButtonA").classList.toggle("show");
+}
+window.onclick = function(event)
+{
+if (!event.target.matches('.dropbtn'))
+{
+var dropdowns = document.getElementsByClassName("dropdown-content");
+var i;
+for (i = 0; i < dropdowns.length; i++)
+{
+var openDropdown = dropdowns[i];
+if (openDropdown.classList.contains('show'))
+{
+openDropdown.classList.remove('show');
+}
+}
+}
+}
+</script>
+<!-- End of Resource Links Button Javascript -->
+
+<!-- Start of Tenant Button html -->
+<div class="tbtn">
+<button onclick="callTenantPage()" class="dropbtn">Tenant or Landlord</button>
+</div>
+<!-- End of Tenant Button html -->
+<!-- Start of Fair Housing Button html -->
+<div class="fbtn">
+<button onclick="callFairHousingPage()" class="dropbtn">Fair Housing</button>
+</div>
+</body>
+</html>
