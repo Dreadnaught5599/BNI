@@ -6,24 +6,24 @@
 <style>
 body
 {
-background: red url("img/BNIlogo.JPG");
-background-position: 50% -40%;
-background-repeat: no-repeat;
-background-size: cover;
+	background: red url("img/BNIlogo.JPG");
+	background-position: 50% -40%;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 /* ----------------------------------------------Start of Resource Links and Agencies Button CSS ----------------------------------------------------- */
 .dropbtn {
     background-color: white;
     color: black;
     font-size: 15px;
-font-style: normal;
+		font-style: normal;
     cursor: pointer;
-border: solid;
-max-width: 125px;
-min-width: 125px;
-max-height: 100px;
-min-height: 50px;
-text-align: center;
+		border: solid;
+		max-width: 125px;
+		min-width: 125px;
+		max-height: 100px;
+		min-height: 50px;
+		text-align: center;
 }
 
 /* Dropdown button on hover & focus */
@@ -41,8 +41,8 @@ text-align: center;
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
-background-color: white;
-left: 1%;
+	background-color: white;
+	left: 1%;
     min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,10);
     z-index: 1;
@@ -84,66 +84,66 @@ left: 1%;
              {
                 window.location.href = "tenant.html";
              }
-</script>
+			</script>
 <!-- End of Tenant Button JavaScript -->
 <!-- Start of FairHousing Button JavaScript -->
-<script type="text/javascript">
-function callFairHousingPage()
-{
-window.location.href = "housing.html";
-}
-</script>
+					<script type="text/javascript">
+	 					function callFairHousingPage()
+	 					{
+							window.location.href = "housing.html";
+	 					}
+						</script>
 
 <!-- End of FairHousing Button JavaScript -->
 <!-- Start of Resource Button JavaScript -->
 <script type="text/javascript">
-function callResourcePage()
-{
-window.location.href = "resource.html";
-}
-</script>
+	function callResourcePage()
+	{
+		window.location.href = "resource.html";
+	}
+	</script>
 <!-- End of Resource Button Javascript -->
 </head>
 <body>
 
 <!-- Start of Resource Links Button html -->
-<!-- <div class="dropdown">
-<button onclick="linkButton()" class="dropbtn">Resource Links and Agencies</button>
-<div id="linkButtonA" class="dropdown-content">
-<a href="https://www.google.com">Google</a>
-<a href="#about">Link 2</a>
-<a href="#contact">Link 3</a>
+	<!-- <div class="dropdown">
+		<button onclick="linkButton()" class="dropbtn">Resource Links and Agencies</button>
+			<div id="linkButtonA" class="dropdown-content">
+				<a href="https://www.google.com">Google</a>
+				<a href="#about">Link 2</a>
+				<a href="#contact">Link 3</a>
 
-</div>
-</div> -->
-<div class="dropdown">
-<button onclick="callResourcePage()" class="dropbtn">Resource Links and Agencies</button>
-</div>
+			</div>
+	</div> -->
+	<div class="dropdown">
+	<button onclick="callResourcePage()" class="dropbtn">Resource Links and Agencies</button>
+	</div>
 <!-- End of Resource Links Button html -->
 
 <!-- Start of Resource Links Button Javascript -->
-<script>
-function linkButton()
-{
-document.getElementById("linkButtonA").classList.toggle("show");
-}
-window.onclick = function(event)
-{
-if (!event.target.matches('.dropbtn'))
-{
-var dropdowns = document.getElementsByClassName("dropdown-content");
-var i;
-for (i = 0; i < dropdowns.length; i++)
-{
-var openDropdown = dropdowns[i];
-if (openDropdown.classList.contains('show'))
-{
-openDropdown.classList.remove('show');
-}
-}
-}
-}
-</script>
+	<script>
+		function linkButton()
+			{
+				document.getElementById("linkButtonA").classList.toggle("show");
+			}
+		window.onclick = function(event)
+			{
+				if (!event.target.matches('.dropbtn'))
+				{
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++)
+					{
+						var openDropdown = dropdowns[i];
+						if (openDropdown.classList.contains('show'))
+						{
+							openDropdown.classList.remove('show');
+						}
+					}
+				}
+			}
+		</script>
 <!-- End of Resource Links Button Javascript -->
 
 <!-- Start of Tenant Button html -->
@@ -155,5 +155,5 @@ openDropdown.classList.remove('show');
 <div class="fbtn">
 <button onclick="callFairHousingPage()" class="dropbtn">Fair Housing</button>
 </div>
-</body>
+	</body>
 </html>
